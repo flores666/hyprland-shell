@@ -1,6 +1,8 @@
 import Quickshell
 import QtQuick
+import "widgets/conf"
 import "widgets/corners"
+import "widgets/bar"
 
 Variants {
     model: Quickshell.screens
@@ -13,6 +15,9 @@ Variants {
             visible: false
 
             CornersWidget {}
+            BarWidget {
+                implicitHeight: Config.barHeight
+            }
         }
     }
 }
